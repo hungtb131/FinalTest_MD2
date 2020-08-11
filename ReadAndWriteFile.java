@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWriteFile<E> {
-    
+
     public void writeFile(String PATH, List<E> list) {
-        
+
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(PATH);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -22,7 +22,7 @@ public class ReadAndWriteFile<E> {
     public List<E> readFile(String PATH) {
         List<E> list = new ArrayList<>();
         try {
-            FileInputStream fileInputStream = new FileInputStream("contact.csv");
+            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\hungt\\IdeaProjects\\ThiModule2\\src\\Data\\contacts.csv");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             list = (List<E>) objectInputStream.readObject();
             objectInputStream.close();

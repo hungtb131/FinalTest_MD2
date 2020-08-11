@@ -9,10 +9,10 @@ public class PhoneList implements Serializable {
     private String name;
     private String gender;
     private String address;
-    private String birthday;
+    private int birthday;
     private String email;
     
-    public PhoneList(int id, int phoneNum, String group, String name, String gender, String address, String birthday, String email) {
+    public PhoneList(int id, int phoneNum, String group, String name, String gender, String address, int birthday, String email) {
         this.id=id;
         this.phoneNum = phoneNum;
         this.group = group;
@@ -22,7 +22,10 @@ public class PhoneList implements Serializable {
         this.birthday= birthday;
         this.email=email;
     }
-    
+
+    public PhoneList(int number, String group, String name, String gender, String address, int birthday, String email) {
+    }
+
     public int getId(){
         return id;
     }
@@ -47,7 +50,7 @@ public class PhoneList implements Serializable {
         return address;
     }
 
-    public String getBirthday(){
+    public int getBirthday(){
         return birthday;
     }
 
@@ -78,7 +81,7 @@ public class PhoneList implements Serializable {
         this.address = address;
     }
 
-    public void setBirthday(String birthday){
+    public void setBirthday(int birthday){
         this.birthday= birthday;
     }
 
